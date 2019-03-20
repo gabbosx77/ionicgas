@@ -1,7 +1,12 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>estadisticas</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color='primary'>
+        <ion-buttons slot='start'>
+            <ion-menu-button>
+
+            </ion-menu-button>
+        </ion-buttons>
+        <ion-title>estadisticas</ion-title>
+    </ion-toolbar>
 </ion-header>
 <script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
 
@@ -9,22 +14,21 @@
 <ion-content padding>
 
 
-  <script type="text/javascript">
-  
-    var viz;
-                               /*database connector*/
-    function draw() {
-        var config = {
-            container_id: "viz",
-            server_url: "bolt://localhost:7687",
-            server_user: "neo4j",
-            server_password: "Modular1",
-            
-            initial_cypher: "MATCH (n:Auto) RETURN (n) limit 10"
-        };
-  
-        viz = new NeoVis.default(config);
-        viz.render();
-    }
-  </script> 
+    <script type="text/javascript">
+        var viz;
+        /*database connector*/
+        function draw() {
+            var config = {
+                container_id: "viz",
+                server_url: "bolt://localhost:7687",
+                server_user: "neo4j",
+                server_password: "Modular1",
+
+                initial_cypher: "MATCH (n:Auto) RETURN (n) limit 10"
+            };
+
+            viz = new NeoVis.default(config);
+            viz.render();
+        }
+    </script>
 </ion-content>
