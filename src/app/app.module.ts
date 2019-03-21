@@ -1,25 +1,35 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { NgModule } from '@angular/core';
 
+// Routes
+import { app_routing } from './app.routes';
 
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './componets/footer/footer.component';
+import { NavbarComponent } from './componets/navbar/navbar.component';
+import { HeaderComponent } from './componets/header/header.component';
+import { LoginComponent } from './componets/login/login.component';
+import { RegisterComponent } from './componets/register/register.component';
+import { HomeComponent } from './componets/home/home.component';
+import { BodyComponent } from './componets/body/body.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    NavbarComponent,
+    HeaderComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    BodyComponent
   ],
+  imports: [
+    BrowserModule,
+    app_routing
+  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
-
+export class AppModule { }
