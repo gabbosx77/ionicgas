@@ -10,7 +10,22 @@ import { MenuPage } from './menu.page';
 const routes: Routes = [
   {
     path: '',
-    component: MenuPage
+    redirectTo: '/menu/home',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    component: MenuPage,
+    children: [
+      { path: 'perfil', loadChildren: '../perfil/perfil.module#PerfilPageModule' },
+      { path: 'first-config', loadChildren: '../first-config/first-config.module#FirstConfigPageModule' },
+      { path: 'vehiculos', loadChildren: '../vehiculos/vehiculos.module#VehiculosPageModule' },
+      { path: 'register', loadChildren: '../register/register.module#RegisterPageModule' },
+      { path: 'home', loadChildren: '../home/home.module#HomePageModule' },
+      { path: 'login', loadChildren: '../login/login.module#LoginPageModule' },
+      { path: 'singin', loadChildren: '../singin/singin.module#SinginPageModule' },
+      { path: 'estadistica', loadChildren: '../estadistica/estadistica.module#EstadisticaPageModule' },
+    ]
   }
 ];
 
