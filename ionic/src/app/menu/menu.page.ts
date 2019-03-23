@@ -9,8 +9,8 @@ export class MenuPage implements OnInit {
 
   pages = [
     {
-      title: 'Main',
-      url: '/menu/main',
+      title: 'Home',
+      url: '/menu/home',
       icon: 'home'
     },
     {
@@ -18,8 +18,8 @@ export class MenuPage implements OnInit {
       children: [
         {
           title: 'Home',
-          url: '/menu/home',
-          icon: 'home'
+          url: '/menu/register',
+          icon: 'logo-car'
         }
       ]
     }
