@@ -7,33 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPage implements OnInit {
 
-  pages =[
+  pages = [
     {
       title: 'Home',
       url: '/menu/home',
-      icon: 'home'
+      icon: 'logo-planet'
     },
     {
       title: 'Reduccion de gasolina',
       children: [
         {
-          title: 'Estadisticas',
-          url: '/menu/estadisticas',
-          icon: 'stats'
-        },
-        {
-          title: 'Recarga de combustible',
-          url: '/menu/recharge',
-          icon: 'batery-charging'
-        },
-        {
-          title: 'Registro de vehiculo',
-          url: '/menu/register-car',
-          icon: 'car'
-        },
+          title: 'Register',
+          url: '/menu/register',
+          icon: 'logo-car'
+        }
       ]
     }
   ];
+
   constructor() { }
 
   ngOnInit() {

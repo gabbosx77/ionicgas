@@ -5,6 +5,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'menu', pathMatch: 'full' },
   { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
 
+
 ];
 
 @NgModule({
