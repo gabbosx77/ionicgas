@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'singin', loadChildren: './singin/singin.module#SinginPageModule' },
-  { path: 'estadistica', loadChildren: './estadistica/estadistica.module#EstadisticaPageModule' },
+  { path: 'estadistica', loadChildren: './estadistica/estadistica.module#EstadisticaPageModule' },  { path: 'acceso', loadChildren: './acceso/acceso.module#AccesoPageModule' },
+
 
 
 ];
