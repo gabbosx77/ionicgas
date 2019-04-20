@@ -10,8 +10,7 @@ import { AuthService } from '../servicios/auth.service';
 })
 export class AccesoPage implements OnInit {
 
-  email: string;
-  password: string;
+ 
 
   constructor(private authservice: AuthService) { }
 
@@ -20,7 +19,7 @@ export class AccesoPage implements OnInit {
 
   OnSubmitLogin()
   {
-    this.authservice.login(this.email, this.password);
+    console.log('estas en la funcion')
   }
 
 }
