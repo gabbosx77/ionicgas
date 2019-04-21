@@ -11,7 +11,7 @@ export class AuthService {
 
   login(email:string, password:string){
     this.AFauth.auth.signInWithEmailAndPassword(email, password).then(res => {
-      console.log(res)
+      console.log('estas logeado: ' + res)
     }).catch(err => console.log('error : ' + err))
   }
 }

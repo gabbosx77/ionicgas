@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../servicios/auth.service';
+import { AccesoPageModule } from './acceso.module';
 
 
 
@@ -10,7 +11,8 @@ import { AuthService } from '../servicios/auth.service';
 })
 export class AccesoPage implements OnInit {
 
- 
+  email: string;
+  password: string; 
 
   constructor(private authservice: AuthService) { }
 
@@ -19,7 +21,7 @@ export class AccesoPage implements OnInit {
 
   OnSubmitLogin()
   {
-    console.log('estas en la funcion')
+    this.authservice.login(this.email, this.password);
   }
 
 }
