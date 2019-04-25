@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'acceso', pathMatch: 'full' },
   { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
   { path: 'first-config', loadChildren: './first-config/first-config.module#FirstConfigPageModule' },
   { path: 'vehiculos', loadChildren: './vehiculos/vehiculos.module#VehiculosPageModule' },
@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'singin', loadChildren: './singin/singin.module#SinginPageModule' },
-  { path: 'estadistica', loadChildren: './estadistica/estadistica.module#EstadisticaPageModule' },  { path: 'acceso', loadChildren: './acceso/acceso.module#AccesoPageModule' },
+  { path: 'estadistica', loadChildren: './estadistica/estadistica.module#EstadisticaPageModule' },
+  { path: 'acceso', loadChildren: './acceso/acceso.module#AccesoPageModule' },
 
 
 
