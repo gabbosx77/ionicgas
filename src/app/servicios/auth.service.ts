@@ -17,4 +17,8 @@ export class AuthService {
       }).catch(err => rejected(err));
     });
   }
+
+  logout(){
+    this.AFauth.auth.signOut();
+  }
 }
