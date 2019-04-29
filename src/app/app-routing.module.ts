@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule', canActivate : [AuthGuard] },
   { path: 'singin', loadChildren: './singin/singin.module#SinginPageModule' },
   { path: 'estadistica', loadChildren: './estadistica/estadistica.module#EstadisticaPageModule' },
-  { path: 'acceso', loadChildren: './acceso/acceso.module#AccesoPageModule',canActivate : [NoaccesoGuard] },
+  { path: 'acceso', loadChildren: './acceso/acceso.module#AccesoPageModule', canActivate : [NoaccesoGuard] },
 
 
 
