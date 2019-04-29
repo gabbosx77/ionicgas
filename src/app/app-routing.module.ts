@@ -7,7 +7,7 @@ import { NoaccesoGuard } from './guards/noacceso.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'acceso', pathMatch: 'full' },
-  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
+  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule', canActivate : [AuthGuard] },
   { path: 'first-config', loadChildren: './first-config/first-config.module#FirstConfigPageModule' },
   { path: 'vehiculos', loadChildren: './vehiculos/vehiculos.module#VehiculosPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
