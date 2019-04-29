@@ -12,7 +12,7 @@ const app_routes: Routes = [
     // register route
     { path: 'register', component: RegisterComponent},
     // Default Route
-    { path: '**', pathMatch: 'full', redirectTo: 'login'}
+    { path: '**', pathMatch: 'full', redirectTo: 'login'},
 ];
 
 export const app_routing = RouterModule.forRoot(app_routes);

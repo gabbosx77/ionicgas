@@ -16,11 +16,15 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
+// Import HttpClientModule from @angular/common/http
+import {HttpClientModule} from '@angular/common/http';
+
+
+ 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-   AngularFireModule.initializeApp(firebaseConfig), AngularFireAuthModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,
@@ -29,4 +33,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+
+
+
+
+
 
