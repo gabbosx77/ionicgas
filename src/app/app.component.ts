@@ -26,7 +26,7 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
-  Onlogout(){
+  Onlogout() {
     this.authservice.logout();
   }
 }

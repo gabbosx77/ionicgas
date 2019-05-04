@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       return this.AFauth.authState.pipe(map(auth => {
-        if(isNullOrUndefined(auth)){
+        if (isNullOrUndefined(auth)) {
           this.router.navigate(['/acceso']);
           return false;
         } else {

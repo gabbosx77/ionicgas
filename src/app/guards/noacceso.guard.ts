@@ -12,12 +12,12 @@ import { Router } from '@angular/router';
 export class NoaccesoGuard implements CanActivate {
 
   constructor(private AFauth: AngularFireAuth,
-    private router: Router){}
+    private router: Router) {}
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       return this.AFauth.authState.pipe(map(auth => {
-        if(isNullOrUndefined(auth)){
+        if (isNullOrUndefined(auth)) {
 
           return true;
         } else {
@@ -25,7 +25,7 @@ export class NoaccesoGuard implements CanActivate {
           return false;
         }
 
-      }))
+      }));
   }
 }
 
