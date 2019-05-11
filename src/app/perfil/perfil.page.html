@@ -9,11 +9,14 @@
 
 <ion-content>
     <ion-list>
-        <ion-item>
+        <ion-item *ngFor="let profinf of perfilinfo">
             <ion-avatar item-start>
                 <img src="https://scontent.fgdl3-1.fna.fbcdn.net/v/t1.0-9/22780574_1589485547761774_7462605503040513962_n.jpg?_nc_cat=106&_nc_ht=scontent.fgdl3-1.fna&oh=0e6b9829f03d886083a5b618e3c44a76&oe=5D76278F">
             </ion-avatar>
-            Borre se la come
+            <ion-label>
+                <h2><b>{{perfilinfo.Nombre}}</b></h2>
+                <h3>{{perfilinfo.Fechanac}}</h3>
+            </ion-label>
         </ion-item>
     </ion-list>
 
