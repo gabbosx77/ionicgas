@@ -2,15 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { PerfilService } from '../servicios/perfil.service';
 import { AuthService } from '../servicios/auth.service';
 
-
-// tslint:disable-next-line: class-name
-interface profinf {
+interface proinf {
+  Fehcanac: string
+  id: string
+  imgprofile: string
+  Nombre: string
+}
+/*interface profinf {
   Fehcanac: string;
   Nombre: string;
   Username: string;
   imgprofile: string;
   id: string;
-}
+}*/
 
 
 @Component({
@@ -29,7 +33,7 @@ export class PerfilPage implements OnInit {
       profinfs.map( profinf => {
         /*console.log(inf.payload.doc.data())*/
 
-        const data: profinf = profinf.payload.doc.data() as profinf;
+        const data: proinf = profinf.payload.doc.data() as proinf;
 
         data.id = profinf.payload.doc.id;
       this.perfilinfo.push(data);
