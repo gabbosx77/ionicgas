@@ -11,7 +11,7 @@
     <ion-list>
         <ion-item *ngFor="let proinf of perfilinfo">
             <ion-avatar item-start>
-                <img src="https://scontent.fgdl3-1.fna.fbcdn.net/v/t1.0-9/22780574_1589485547761774_7462605503040513962_n.jpg?_nc_cat=106&_nc_ht=scontent.fgdl3-1.fna&oh=0e6b9829f03d886083a5b618e3c44a76&oe=5D76278F">
+                <ion-img [src]="proinf.imgprofile"></ion-img>
             </ion-avatar>
             <ion-label>
                 <h2><b>{{proinf.Nombre}}</b></h2>
