@@ -8,15 +8,16 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
+    <ion-card>
         <ion-item *ngFor="let proinf of perfilinfo">
             <ion-avatar item-start>
                 <ion-img [src]="proinf.imgprofile"></ion-img>
             </ion-avatar>
-            <ion-label>
+            <ion-label color="dark">
                 <h2><b>{{proinf.Nombre}}</b></h2>
+                <h2><b>{{proinf.Username}}</b></h2>
                 <h3>{{proinf.Fechanac}}</h3>
             </ion-label>
         </ion-item>
-    </ion-list>
+    </ion-card>
 </ion-content>

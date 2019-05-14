@@ -7,6 +7,7 @@ interface proinf {
   id: string
   imgprofile: string
   Nombre: string
+  Username: string
 }
 /*interface profinf {
   Fehcanac: string;
