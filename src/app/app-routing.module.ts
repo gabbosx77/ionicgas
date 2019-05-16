@@ -8,12 +8,12 @@ const routes: Routes = [
   { path: '', redirectTo: 'acceso', pathMatch: 'full' },
   { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule', canActivate : [AuthGuard]  },
   { path: 'first-config', loadChildren: './first-config/first-config.module#FirstConfigPageModule' },
-  { path: 'vehiculos', loadChildren: './vehiculos/vehiculos.module#VehiculosPageModule' },
-  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'vehiculos', loadChildren: './vehiculos/vehiculos.module#VehiculosPageModule', canActivate : [AuthGuard]  },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule', canActivate : [NoaccesoGuard] },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule', canActivate : [AuthGuard] },
   { path: 'singin', loadChildren: './singin/singin.module#SinginPageModule' },
-  { path: 'estadistica', loadChildren: './estadistica/estadistica.module#EstadisticaPageModule' },
+  { path: 'estadistica', loadChildren: './estadistica/estadistica.module#EstadisticaPageModule', canActivate : [AuthGuard]  },
   { path: 'acceso', loadChildren: './acceso/acceso.module#AccesoPageModule', canActivate : [NoaccesoGuard]  },
 
 

@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Register</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="secondary">
+        <ion-title>Registro</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+    <img class="icon" src="https://firebasestorage.googleapis.com/v0/b/gasreductionmodular.appspot.com/o/WhatsApp%20Image%202019-05-08%20at%2021.56.54.jpeg?alt=media&token=2c99eb38-5bf6-409d-8473-74a2cdcb6af8" alt="">
+    <ion-list no-lines>
+        <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input round type=”text” [(ngModel)]="name" name=”name”></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Nombre de usuario</ion-label>
+            <ion-input round type=”text” [(ngModel)]="nombreuser" name=”nombreuser”></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Correo elecronico</ion-label>
+            <ion-input round type=”text” [(ngModel)]="email" name=”e-mail”></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type=”password” [(ngModel)]="password" name="password"></ion-input>
+        </ion-item>
+    </ion-list>
+    <br>
+    <ion-button expand="block" color="secondary" (click)="OnsubmitRegister()">Registro</ion-button>
+    <br>
+    <p text-center routerLink="/acceso">Ya tengo Cuenta</p>
 
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PerfilService } from '../servicios/perfil.service';
 import { AuthService } from '../servicios/auth.service';
+import { ModalController } from '@ionic/angular';
 
 interface proinf {
   Fehcanac: string
@@ -27,7 +28,7 @@ export class PerfilPage implements OnInit {
 
   public perfilinfo: any = [];
 
-  constructor(public authservice: AuthService, public perfilservice: PerfilService) { }
+  constructor(public authservice: AuthService, public perfilservice: PerfilService, private modal: ModalController) { }
 
   ngOnInit() {
     this.perfilservice.getProfileInf().subscribe( profinfs => {
@@ -43,5 +44,9 @@ export class PerfilPage implements OnInit {
       });
     });
   }
-
+  /*openperf(proinf){
+    this.modal.create({
+      component:
+    })
+  }*/
 }
