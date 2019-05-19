@@ -42,4 +42,11 @@ export class AuthService {
       }).catch(err => reject(err))
     })
   }
+
+  /*getperfil(name, nombreuser){
+    return new Promise((resolve, reject) => {
+      this.AFauth.auth.getRedirectResult(name, nombreuser)
+
+    })
+  }*/
 }
