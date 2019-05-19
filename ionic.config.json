@@ -1,5 +1,7 @@
 {
   "name": "modular",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
