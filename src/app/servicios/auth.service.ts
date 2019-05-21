@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { promise } from 'protractor';
 import { reject } from 'q';
 import { resolve } from 'path';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'

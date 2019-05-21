@@ -15,6 +15,8 @@ const routes: Routes = [
   { path: 'singin', loadChildren: './singin/singin.module#SinginPageModule' },
   { path: 'estadistica', loadChildren: './estadistica/estadistica.module#EstadisticaPageModule', canActivate : [AuthGuard]  },
   { path: 'acceso', loadChildren: './acceso/acceso.module#AccesoPageModule', canActivate : [NoaccesoGuard]  },
+  { path: 'privacypol', loadChildren: './privacypol/privacypol.module#PrivacypolPageModule', canActivate : [AuthGuard] },
+
 
 
 
