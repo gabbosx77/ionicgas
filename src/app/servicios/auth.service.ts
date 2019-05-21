@@ -43,9 +43,9 @@ export class AuthService {
     })
   }
 
-  /*getperfil(name, nombreuser){
+ /* getperfil(){
     return new Promise((resolve, reject) => {
-      this.AFauth.auth.getRedirectResult(name, nombreuser)
+      this.AFauth.aut.getprofileinf()
 
     })
   }*/
