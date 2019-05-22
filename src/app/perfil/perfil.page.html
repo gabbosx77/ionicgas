@@ -8,15 +8,12 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
-        <ion-item *ngFor="let proinf of perfilinfo">
-            <ion-avatar item-start>
-                <ion-img [src]="proinf.imgprofile"></ion-img>
-            </ion-avatar>
+    <ion-card *ngIf="user_logued">
+        <ion-item>
             <ion-label color="dark">
-                <h2><b>{{proinf.Nombre}}</b></h2>
-                <h2><b>{{proinf.Username}}</b></h2>
-                <h3>{{proinf.Fechanac}}</h3>
+                <h2><b>{{user_logued.name}}</b></h2>
+                <h2><b>{{user_logued.usrname}}</b></h2>
+                <!--<h3>{{user_logued.uid}}</h3>-->
             </ion-label>
         </ion-item>
     </ion-card>

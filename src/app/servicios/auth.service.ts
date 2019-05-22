@@ -43,6 +43,10 @@ export class AuthService {
     })
   }
 
+  getAuth(){   //este metodo retorna el objeto auth con las propiedades de authenticacion del usuario
+    return this.AFauth.authState;
+  }
+
  /* getperfil(){
     return new Promise((resolve, reject) => {
       this.AFauth.aut.getprofileinf()
