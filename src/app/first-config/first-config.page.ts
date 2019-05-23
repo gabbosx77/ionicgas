@@ -15,13 +15,6 @@ import { FirebaseService } from '../servicios/firebase.service';
 })
 export class FirstConfigPage  {
 
-  /*public Carname: string
-  public marca: string
-  public modelo: string
-  public transmision: string
-  public combustible: string
-  public rendimiento: string*/
-  
   value ={
     carname: '',
     marca: '',

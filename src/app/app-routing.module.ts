@@ -16,6 +16,9 @@ const routes: Routes = [
   { path: 'estadistica', loadChildren: './estadistica/estadistica.module#EstadisticaPageModule', canActivate : [AuthGuard]  },
   { path: 'acceso', loadChildren: './acceso/acceso.module#AccesoPageModule', canActivate : [NoaccesoGuard]  },
   { path: 'privacypol', loadChildren: './privacypol/privacypol.module#PrivacypolPageModule', canActivate : [AuthGuard] },
+  { path: 'details', loadChildren: './details/details.module#DetailsPageModule' },
+  { path: 'recharge', loadChildren: './recharge/recharge.module#RechargePageModule', canActivate : [AuthGuard] },
+
 
 
 

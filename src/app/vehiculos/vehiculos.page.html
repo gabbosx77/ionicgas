@@ -6,16 +6,24 @@
         <ion-title>vehiculos</ion-title>
     </ion-toolbar>
 </ion-header>
-
-<ion-content>
-    <ion-card *ngIf="infocar">
-        <ion-item>
-            <ion-label color="dark">
-                <h2><b>{{infocar.carname}}</b></h2>
-                <h2><b>{{infocar.modelo}}</b></h2>
-                <!--<h3>{{user_logued.uid}}</h3>-->
-            </ion-label>
-        </ion-item>
-    </ion-card>
-    <ion-button href='first-config'>Registrar nuevo vehiculo</ion-button>
-</ion-content>
+<!--
+<ion-content *ngIf="items" class="list-mini-content" padding>
+    <div *ngIf="items.length > 0" class="list-mini">
+        <ion-list>
+            <ion-item *ngFor="let item of items" [routerLink]="['/details', item.payload.doc.id]">
+                <ion-thumbnail slot="start">
+                    <img [src]="item.payload.doc.data().image">
+                </ion-thumbnail>
+                <ion-label>{{item.payload.doc.data().title}}</ion-label>
+                <ion-button fill="clear" slot="end">Details</ion-button>
+            </ion-item>
+        </ion-list>
+    </div>
+    <div *ngIf="items.length == 0" class="empty-list">
+    </div>
+</ion-content>-->
+<ion-footer>
+    <ion-toolbar color="medium">
+        <ion-button href='first-config'>Registrar nuevo vehiculo</ion-button>
+    </ion-toolbar>
+</ion-footer>

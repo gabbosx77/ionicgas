@@ -14,15 +14,7 @@ export interface proinf {
   Username: string
 }
 
-export interface procar{
-  carname: string;
-  marca: string;
-  modelo: string;
-  transmision: string;
-  combustible: string;
-  consumo: string;
-  id: string;
-}
+
 
 @Injectable({
   providedIn: 'root'
@@ -42,7 +34,7 @@ export class PerfilService {
     }))
   };
 
-  getInfoUser(uid:string){
+  getInfoUser(uid: string){
     return new Promise((resolve, rejected) => {
       this.db.doc(`users/${uid}`).ref.get().then( user => {
         resolve(user.data())
@@ -52,34 +44,5 @@ export class PerfilService {
     })
   }
 
-  getCarInfo() {
-    return this.db.collection('UserCars').snapshotChanges().pipe(map(rooms => {
-      return rooms.map(a =>{
-        const data = a.payload.doc.data() as procar;
-        data.id = a.payload.doc.id;
-        return data;
-      })
-    }))
-  };
-
-  getCarInf() {
-    return this.db.collection('UserCars').snapshotChanges().pipe(map(rooms => {
-      return rooms.map(a =>{
-        const data = a.payload.doc.data() as proinf;
-        data.id = a.payload.doc.id;
-        return data;
-      })
-    }))
-  };
-
-  getInfoCar(uid:string){
-    return new Promise((resolve, rejected) => {
-      this.db.doc(`UserCars/${uid}`).ref.get().then( car => {
-        resolve(car.data())
-      }).catch(error => {
-        rejected(error);
-      })
-    })
-  }
-
+ 
 }

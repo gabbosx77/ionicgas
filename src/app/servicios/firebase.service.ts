@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireAuth } from '@angular/fire/auth';
+import 'firebase/storage';
+import * as firebase from 'firebase/app';
 
 
 
@@ -7,12 +10,14 @@ import { AngularFirestore } from '@angular/fire/firestore';
   providedIn: 'root'
 })
 export class FirebaseService {
+  private sanpshotChangesSubscription: any;
 
-  constructor(public afs: AngularFirestore) { }
+  constructor(public afs: AngularFirestore, public afauth: AngularFireAuth) { }
 
-  addcar(value){
-    return new Promise<any>((resolve, reject) =>{
-      this.afs.collection('UsrCars').add({
+  addcar(value) {
+    return new Promise<any>((resolve, reject) => {
+      let currentUser = firebase.auth().currentUser;
+      this.afs.collection('users').doc(currentUser.uid).collection('UsrCars').add({
         carname: value.carname,
         marca: value.marca,
         modelo: value.modelo,
@@ -25,4 +30,17 @@ export class FirebaseService {
       , err => reject(err))
     })
   }
+
+  getcar(){
+    return new Promise<any>((resolve, reject) => {
+      this.afauth.user.subscribe(currentUser =>{
+        if (currentUser){
+          this.sanpshotChangesSubscription = this.afs.collection('users').doc(currentUser.uid).collection('UsrCars').snapshotChanges();
+          resolve(this.sanpshotChangesSubscription);
+        }
+      });
+    })
+  }
+
+ 
 }
