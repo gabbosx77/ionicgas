@@ -31,7 +31,7 @@ export class PerfilPage implements OnInit {
     this.authservice.getAuth().subscribe(auth => {  //conseguimos el uid del usuario logueado
       this.perfilservice.getInfoUser(auth.uid).then(user => { //conseguimos los datos del usuario logueado a traves de su uid
         this.user_logued = user; //igualamos variables para mostrar en el html
-        console.log(user);
+        //console.log(user);
         
       }).catch(err => {
         console.log(err);

@@ -3,10 +3,37 @@
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>firstConfig</ion-title>
+        <ion-title>Registro de vehiculos</ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+    <ion-list no-lines>
+        <ion-item>
+            <ion-label position="floating">Nombre de vehiculo</ion-label>
+            <ion-input round type=”text” [(ngModel)]="value.carname"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Marca</ion-label>
+            <ion-input round type=”text” [(ngModel)]="value.marca"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Modelo</ion-label>
+            <ion-input round type=”text” [(ngModel)]="value.modelo"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Transmision</ion-label>
+            <ion-input round type=”text” [(ngModel)]="value.transmision"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Tipo de combustible</ion-label>
+            <ion-input round type=”text” [(ngModel)]="value.combustible"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Rendimiento</ion-label>
+            <ion-input round type=”text” [(ngModel)]="value.rendimiento"></ion-input>
+        </ion-item>
+        <ion-button expand="block" color="secondary" (click)="clicboton()">Registrar vehiculo</ion-button>
+        <ion-button expand="block" color="danger" href="vehiculos">Regresar</ion-button>
+    </ion-list>
 </ion-content>

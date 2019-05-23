@@ -6,6 +6,9 @@ import { promise } from 'protractor';
 import { reject } from 'q';
 import { resolve } from 'path';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { auth } from 'firebase';
+import { NAMESPACE_URIS } from '@angular/platform-browser/src/dom/dom_renderer';
+
 
 @Injectable({
   providedIn: 'root'
@@ -43,14 +46,16 @@ export class AuthService {
     })
   }
 
+  /*addcar(marca: string, modelo: string, combustible: string, consumo: string){
+    return new Promise((resolve, reject)=>{
+      this.AFauth.auth.
+      this.db.collection('UsrCars').
+    })
+
+  }*/
+
   getAuth(){   //este metodo retorna el objeto auth con las propiedades de authenticacion del usuario
     return this.AFauth.authState;
   }
-
- /* getperfil(){
-    return new Promise((resolve, reject) => {
-      this.AFauth.aut.getprofileinf()
-
-    })
-  }*/
+  
 }

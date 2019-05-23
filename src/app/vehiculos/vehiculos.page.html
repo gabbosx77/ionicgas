@@ -1,9 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>vehiculos</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>vehiculos</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <ion-card *ngIf="infocar">
+        <ion-item>
+            <ion-label color="dark">
+                <h2><b>{{infocar.carname}}</b></h2>
+                <h2><b>{{infocar.modelo}}</b></h2>
+                <!--<h3>{{user_logued.uid}}</h3>-->
+            </ion-label>
+        </ion-item>
+    </ion-card>
+    <ion-button href='first-config'>Registrar nuevo vehiculo</ion-button>
 </ion-content>
